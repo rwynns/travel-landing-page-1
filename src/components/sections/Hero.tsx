@@ -26,7 +26,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <div className="relative z-10 container mx-auto px-4 text-center text-white pt-20 md:pt-0">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="inline-block py-1 px-3 rounded-full bg-secondary-500/20 border border-secondary-500 text-secondary-400 text-sm font-semibold mb-4 backdrop-blur-sm">🚀 #1 Travel Agent Terpercaya</span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
