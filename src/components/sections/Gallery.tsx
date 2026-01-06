@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
@@ -12,19 +11,10 @@ const photos = [
   { src: "/raja_ampat.png", width: 800, height: 600, alt: "Raja Ampat" },
   { src: "/hero_background.png", width: 1600, height: 900, alt: "Bromo Sunrise" },
   { src: "/about_us.png", width: 800, height: 600, alt: "Trekkers" },
-  { src: "/komodo.png", width: 1600, height: 900, alt: "Komodo" }, // Generated soon
-  { src: "/bali.png", width: 800, height: 600, alt: "Bali" }, // Generated soon
+  { src: "/komodo.png", width: 1600, height: 900, alt: "Komodo" },
+  { src: "/bali.png", width: 800, height: 600, alt: "Bali" },
   { src: "/hero_background.png", width: 800, height: 600, alt: "Another Bromo" },
 ];
-
-// Custom render function for next/image support in react-photo-album
-function renderPhoto({ imageProps: { alt, title, sizes, className, onClick }, wrapperStyle }: any) {
-  return (
-    <div style={{ ...wrapperStyle, position: "relative" }}>
-      <Image fill src={imageProps.src} {...{ alt, title, sizes, className, onClick }} className={`${className} hover:brightness-110 transition-all duration-300 cursor-zoom-in`} />
-    </div>
-  );
-}
 
 export default function Gallery() {
   const [index, setIndex] = useState(-1);
